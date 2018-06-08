@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package="lbase64"
-version="20070628-1"
+version="20100323-1"
 -- LuaDist source
 source = {
-  tag = "20070628-1",
+  tag = "20100323-1",
   url = "git://github.com/LuaDist-testing/lbase64.git"
 }
 -- Original source
 -- source = {
 --    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua//5.1/lbase64.tar.gz",
---    md5 = "a0c2e52a810aabe6ec21964f2362d350",
+--    md5="2a7d3167274b322d104606448b332e51",
 --    dir = "base64"
 -- }
 description = {

@@ -2,7 +2,7 @@
 * lbase64.c
 * base64 encoding and decoding for Lua 5.1
 * Luiz Henrique de Figueiredo <lhf@tecgraf.puc-rio.br>
-* 27 Jun 2007 19:04:40
+* 23 Mar 2010 22:22:38
 * This code is hereby placed in the public domain.
 */
 
@@ -12,7 +12,7 @@
 #include "lauxlib.h"
 
 #define MYNAME		"base64"
-#define MYVERSION	MYNAME " library for " LUA_VERSION " / Jun 2007"
+#define MYVERSION	MYNAME " library for " LUA_VERSION " / Mar 2010"
 
 #define uint unsigned int
 
@@ -102,7 +102,7 @@ static int Ldecode(lua_State *L)		/** decode(s) */
  return 0;
 }
 
-static const luaL_reg R[] =
+static const luaL_Reg R[] =
 {
 	{ "encode",	Lencode	},
 	{ "decode",	Ldecode	},
@@ -111,7 +111,7 @@ static const luaL_reg R[] =
 
 LUALIB_API int luaopen_base64(lua_State *L)
 {
- luaL_openlib(L,MYNAME,R,0);
+ luaL_register(L,MYNAME,R);
  lua_pushliteral(L,"version");			/** version */
  lua_pushliteral(L,MYVERSION);
  lua_settable(L,-3);

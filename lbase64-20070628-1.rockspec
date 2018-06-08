@@ -1,0 +1,35 @@
+-- This file was automatically generated for the LuaDist project.
+
+package="lbase64"
+version="20070628-1"
+-- LuaDist source
+source = {
+  tag = "20070628-1",
+  url = "git://github.com/LuaDist-testing/lbase64.git"
+}
+-- Original source
+-- source = {
+--    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua//5.1/lbase64.tar.gz",
+--    md5 = "a0c2e52a810aabe6ec21964f2362d350",
+--    dir = "base64"
+-- }
+description = {
+   summary = "A Base64 library for Lua",
+   detailed = [[
+      A Base64 library for Lua. Base64 is a base-64 transfer encoding that
+      uses the characters A-Z, a-z, and 0-9 in that order for the first 62
+      digits.
+   ]],
+   homepage = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lbase64",
+   license = "Public domain"
+}
+dependencies = {
+   "lua >= 5.1"
+}
+
+build = {
+   type = "module",
+   modules = {
+      base64 = "lbase64.c"
+   }
+}

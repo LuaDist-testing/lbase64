@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package="lbase64"
-version="20120807-1"
+version="20120807-3"
 -- LuaDist source
 source = {
-  tag = "20120807-1",
+  tag = "20120807-3",
   url = "git://github.com/LuaDist-testing/lbase64.git"
 }
 -- Original source
@@ -20,14 +20,15 @@ description = {
       digits.
    ]],
    homepage = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lbase64",
-   license = "Public domain"
+   license = "Public domain",
+   maintainer = "Ignacio Burgueño <iburgueno@gmail.com>"
 }
 dependencies = {
-   "lua ~> 5.2"
+   "lua >= 5.2, < 5.4"
 }
 
 build = {
-   type = "module",
+   type = "builtin",
    modules = {
       base64 = "lbase64.c"
    }

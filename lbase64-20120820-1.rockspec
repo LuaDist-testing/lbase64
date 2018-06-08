@@ -1,15 +1,15 @@
 -- This file was automatically generated for the LuaDist project.
 
 package="lbase64"
-version="20120807-3"
+version="20120820-1"
 -- LuaDist source
 source = {
-  tag = "20120807-3",
+  tag = "20120820-1",
   url = "git://github.com/LuaDist-testing/lbase64.git"
 }
 -- Original source
 -- source = {
---    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/5.2/lbase64.tar.gz",
+--    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/5.1/lbase64.tar.gz",
 --    dir = "base64"
 -- }
 description = {
@@ -20,15 +20,14 @@ description = {
       digits.
    ]],
    homepage = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lbase64",
-   license = "Public domain",
-   maintainer = "Ignacio Burgueño <iburgueno@gmail.com>"
+   license = "Public domain"
 }
 dependencies = {
-   "lua >= 5.2, < 5.4"
+   "lua ~> 5.1"
 }
 
 build = {
-   type = "builtin",
+   type = "module",
    modules = {
       base64 = "lbase64.c"
    }
